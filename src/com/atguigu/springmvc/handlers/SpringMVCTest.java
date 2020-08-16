@@ -14,7 +14,7 @@ import java.util.Map;
  *@Date 2020/8/15 14:49
  *@Version V1.0
  **/
-//@SessionAttributes(value = {"user"}, types = {String.class})
+@SessionAttributes(value = {"user"}, types = {String.class})
 @Controller
 @RequestMapping("springmvc")
 public class SpringMVCTest {
