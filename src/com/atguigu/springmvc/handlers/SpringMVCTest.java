@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 
 /**
  *@Description
@@ -13,10 +14,31 @@ import javax.servlet.http.HttpServletResponse;
  *@Date 2020/8/15 14:49
  *@Version V1.0
  **/
+//@SessionAttributes(value = {"user"}, types = {String.class})
 @Controller
 @RequestMapping("springmvc")
 public class SpringMVCTest {
     private static final String SUCCESS = "success";
+
+    @RequestMapping("testModelAttribute")
+    public String testModelAttribute(User user) {
+        System.out.println(user);
+        return SUCCESS;
+    }
+
+    /**
+     * SessionAttributes可以通过指定属性名指定放到会话里面的数据
+     * 还可以通过types属性指定放到sessionAttributes中的值
+     * @param map
+     * @return
+     */
+    @RequestMapping("testSessionAttribute")
+    public String testSessionAttribute(Map<String, Object> map) {
+        User user = new User("Tom", "123456", "8891@qq.com", 14);
+        map.put("user", user);
+        map.put("school", "atguigu");
+        return SUCCESS;
+    }
 
     /**
      * 可以使用Servlet原生的API作为目标方法的参数

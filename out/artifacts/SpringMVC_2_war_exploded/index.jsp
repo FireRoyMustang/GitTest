@@ -11,6 +11,14 @@
     <title>$Title$</title>
 </head>
 <body>
+<form action="springmvc/testModelAttribute" method="post">
+    <input type="hidden">
+    username:<input name="username" type="text" value="qy"><br/>
+    age:<input name="age" type="text" value="23"><br/>
+    email:<input name="email" type="email" value="qy@gd.com"><br/>
+    <input type="submit" value="提交">
+</form>
+<a href="springmvc/testSessionAttribute">TestSessionAttribute</a><br/>
 <a href="springmvc/testRequestAPI">TestRequestAPI</a><br/>
 <form method="post" action="">
     username:<input name="username" type="text"><br/>

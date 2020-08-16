@@ -12,5 +12,8 @@
 </head>
 <body>
 <h4>success</h4>
+request user: ${requestScope.user}<br/>
+session user: ${sessionScope.user}
+session school: ${sessionScope.school}
 </body>
 </html>
